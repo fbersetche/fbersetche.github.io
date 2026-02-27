@@ -1,0 +1,121 @@
+/* --- ESTÉTICA TECH-ACADÉMICA --- */
+
+:root {
+    --bg-color: #0d1117;       /* Fondo oscuro profundo */
+    --card-bg: #0d1117;        /* Mismo fondo para evitar exceso de "bloques" y dar aire */
+    --text-main: #e6edf3;     /* Texto principal */
+    --text-muted: #8b949e;    /* Texto secundario/citas */
+    --accent: #00ff41;        /* Verde neón (identidad Mutt) */
+    --border: #30363d;        /* Bordes sutiles */
+    --font-sans: 'Inter', -apple-system, sans-serif;
+}
+
+body {
+    font-family: var(--font-sans);
+    line-height: 1.7; /* Espaciado académico para lectura larga */
+    color: var(--text-main);
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 60px 30px;
+    background-color: var(--bg-color);
+}
+
+/* LÓGICA DE IDIOMAS */
+[lang="en"] { display: none; }
+body.en-active [lang="es"] { display: none; }
+body.en-active [lang="en"] { display: inline; }
+body.en-active div[lang="en"], 
+body.en-active section[lang="en"], 
+body.en-active h2[lang="en"],
+body.en-active p[lang="en"] { display: block; }
+
+/* SELECTOR DE IDIOMA */
+.lang-switch {
+    text-align: right;
+    margin-bottom: 40px;
+}
+.lang-switch span {
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 8px;
+    border: 1px solid var(--border);
+    margin-left: 8px;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+.lang-switch span.active {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+/* ENCABEZADO ACADÉMICO */
+header {
+    margin-bottom: 70px;
+    text-align: left;
+}
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+.links-social { margin-top: 10px; }
+.links-social a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-bottom: 1px solid transparent;
+}
+.links-social a:hover { border-bottom: 1px solid var(--accent); }
+
+/* SECCIONES: Menos "cajas", más estructura de línea */
+section {
+    margin-bottom: 50px;
+    border-top: 1px solid var(--border); /* Línea superior como divisor tradicional */
+    padding-top: 20px;
+}
+
+h2 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    margin-bottom: 30px;
+}
+
+/* CONTENIDO */
+ul { list-style: none; padding: 0; }
+li { margin-bottom: 25px; }
+
+strong { color: #fff; font-weight: 600; }
+
+.interests-list {
+    color: var(--text-main);
+    font-size: 1.1rem;
+}
+
+.thesis {
+    font-size: 0.95em;
+    margin-top: 10px;
+    padding-left: 20px;
+    border-left: 1px solid var(--border);
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* PUBLICACIONES: Estilo lista bibliográfica */
+ul.itemize-list li {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-main);
+}
+ul.itemize-list em {
+    color: var(--accent); /* Resaltamos la revista/journal */
+    font-style: italic;
+}
+
+.item-year {
+    font-family: monospace;
+    color: var(--
