@@ -118,4 +118,34 @@ ul.itemize-list em {
 
 .item-year {
     font-family: monospace;
-    color: var(--
+    color: var(--text-muted);
+    margin-left: 5px;
+}
+
+/* FECHAS Y CARGOS */
+.date-range {
+    color: var(--accent);
+    font-family: monospace;
+    font-size: 0.85rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+}
+
+footer {
+    margin-top: 100px;
+    padding-bottom: 50px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+.email-footer {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    body { padding: 40px 20px; }
+    h1 { font-size: 1.8rem; }
+}
